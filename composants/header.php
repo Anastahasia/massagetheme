@@ -1,8 +1,10 @@
 <header>
     <nav>
-        <ul>
+        <div id="lelogo">
             <img src="images/logo.png" alt="">
-            <li class="text">Homepage</li>
+        </div>
+        <ul>            
+            <li class="text"><a href="">Homepage</a></li>
             <li>About us</li>
             <li>Pages & projects</li>
             <li>blog</li>

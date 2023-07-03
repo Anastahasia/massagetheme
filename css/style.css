@@ -3,17 +3,17 @@ body{
     margin: 0;
 }
 
-main{
-    
-}
 
 header{
     position: fixed;
+    font-size: 14px;
 }
 
 header img{
     width: 300px;
 }
+
+nav{display: flex;}
 
 ul{
     margin:0;

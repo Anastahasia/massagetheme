@@ -6,6 +6,8 @@
         In publishing and graphic design, lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or 
     </p>
 
+    <hr>
+
     <div class="threeCards">
         <div class="carte">
            <h3>Professionnal massage </h3> 
