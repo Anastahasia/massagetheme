@@ -1,6 +1,6 @@
 <section id="partFour">
     <div class="gauche">
-        <img src="images/youdeserveyourtime.jpg" alt="jeune femme">
+        <img src="images/youdeserveyourtime.jpg"  class="image" alt="jeune femme">
     </div>
 
     <div class="droite">

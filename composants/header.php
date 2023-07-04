@@ -5,10 +5,10 @@
         </div>
         <ul>            
             <li class="text"><a href="">Homepage</a></li>
-            <li>About us</li>
-            <li>Pages & projects</li>
-            <li>blog</li>
-            <li><button>Contact</button></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Pages & projects</a></li>
+            <li><a href="">Blog</a></li>
+            <li class="contact"><a href="">Contact</a></li>
         </ul>
     </nav>
 </header>

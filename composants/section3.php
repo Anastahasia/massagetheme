@@ -2,7 +2,7 @@
 <section id="partThree">
     <div class="liste">
         <div>
-            <p>What makes us unique</p>
+            <p class="intro">What makes us unique</p>
             <h2>Why to choose our salon </h2>
 
             <div>
@@ -22,6 +22,6 @@
     </div>
     <div class="banniere">
         <p>Book a Massage Today</p>
-    <a href=""><button>Book a massage</button></a>
+        <a href="">Book a massage</a>
     </div>
 </scetion>

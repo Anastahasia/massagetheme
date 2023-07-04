@@ -13,15 +13,16 @@
     <?php include 'composants/header.php';?>
 
     <main>
+    <div class="backgroundimg"></div>
         <?php 
         include 'composants/section1.php';
         include 'composants/section2.php';
         include 'composants/section3.php';
         include 'composants/section4.php';
-        include 'composants/section5.php';
+       include 'composants/section5.php';
         include 'composants/section6.php';
         include 'composants/section7.php';
-        include 'composants/section8.php';
+        /* include 'composants/section8.php';*/
         ?>
     </main>
 </body>
