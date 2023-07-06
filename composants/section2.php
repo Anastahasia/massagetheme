@@ -1,4 +1,4 @@
-<section id="partTwo">
+<section id="partTwo" class="format">
    <p class="intro">What we do</p>
    <h2>Our services </h2>
 

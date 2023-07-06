@@ -10,20 +10,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php include 'composants/header.php';?>
+    <?php include 'header.php';?>
 
-    <main id="accueil">
-    <div class="backgroundimg"></div>
-        <?php 
-        include 'composants/section1.php';
-        include 'composants/section2.php';
-        include 'composants/section3.php';
-        include 'composants/section4.php';
-       include 'composants/section5.php';
-        include 'composants/section6.php';
-        include 'composants/section7.php';
-        /* include 'composants/section8.php';*/
-        ?>
+    <main id="leblog">
+        <div class="backgroundimg"></div>
+        <section  id="blog">
+            <p>Our blog</p>
+            <h6>Latest news from us</h6>
+        </section>
+        <?php include 'section2Blog.php';?>
     </main>
 </body>
 </html>

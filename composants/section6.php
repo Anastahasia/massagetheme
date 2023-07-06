@@ -1,4 +1,4 @@
-<section id="partFour">
+<section id="partSix">
     <div class="gauche">
         <img src="images/youdeserveyourtime.jpg"  class="image" alt="jeune femme">
     </div>
@@ -14,4 +14,4 @@ Even though using “lorem ipsum” often arouses curiosity due to its resemblan
 
 
 
-</scetion>
+</section>

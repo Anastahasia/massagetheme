@@ -11,4 +11,4 @@ Even though using “lorem ipsum” often arouses curiosity due to its resemblan
         <img src="images/introducingmassagestudio.jpg" alt="jeune femme">
     </div>
 
-</scetion>
+</section>
