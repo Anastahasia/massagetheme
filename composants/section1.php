@@ -13,7 +13,7 @@
         <a href="">Book a massage</a>
     </div>
 
-    <div id="fleche">
+    <div class="circle" id="fleche">
         <a href="#partTwo"><p>&#129123;</p></a>
     </div>
     

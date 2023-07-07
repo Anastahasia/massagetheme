@@ -38,9 +38,9 @@ class maConnexion{
 
     }
 
-    public function insertionArticle($titre, $resume, $titre2, $contenu2, $contenu3, $titre3, $photo, $datePublication){
+    public function insertionArticle($titre, $resume, $titre2, $contenu2, $contenu3, $titre3, $photo){
         try {
-            $requete = "INSERT INTO produit (titre, resume, titre2, contenu2, titre3, contenu3, photo, datePublication) VALUES(:titre, :resume, :titre2, :contenu2, :titre3, :contenu3, :photo, :datePublication)";
+            $requete = "INSERT INTO articles (titre, resume, titre2, contenu2, titre3, contenu3, photo) VALUES(:titre, :resume, :titre2, :contenu2, :titre3, :contenu3, :photo)";
             $requete_prepare = $this->connexionPDO->prepare($requete);
 
             $requete_prepare->bindParam(':titre',$titre,PDO::PARAM_STR);
@@ -50,7 +50,29 @@ class maConnexion{
             $requete_prepare->bindParam(':titre3',$titre3,PDO::PARAM_STR);
             $requete_prepare->bindParam(':contenu3',$contenu3,PDO::PARAM_STR);
             $requete_prepare->bindParam(':photo',$photo,PDO::PARAM_STR);
-            $requete_prepare->bindParam(':datePublication',$datePublication,PDO::PARAM_STR);
+            
+            
+            $requete_prepare->execute();
+            return $requete_prepare;
+            echo 'insertion reussie';
+        }catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+        }
+    }
+
+    public function updateArticle($colonne, $valeurs, $numero){
+        try {
+            $requete = "UPDATE article SET $colonne = '$valeurs' WHERE idarticle = $numero";
+            $requete_prepare = $this->connexionPDO->prepare($requete);
+
+            $requete_prepare->bindParam(':titre',$titre,PDO::PARAM_STR);
+            $requete_prepare->bindParam(':resume',$resume,PDO::PARAM_STR);
+            $requete_prepare->bindParam(':titre2',$titre2,PDO::PARAM_STR);
+            $requete_prepare->bindParam(':contenu2',$contenu2,PDO::PARAM_STR);
+            $requete_prepare->bindParam(':titre3',$titre3,PDO::PARAM_STR);
+            $requete_prepare->bindParam(':contenu3',$contenu3,PDO::PARAM_STR);
+            $requete_prepare->bindParam(':photo',$photo,PDO::PARAM_STR);
+            
             
             $requete_prepare->execute();
             return $requete_prepare;
@@ -63,3 +85,4 @@ class maConnexion{
 
 $blog = new maConnexion('massageproject','','root','localhost');
 $affichage = $blog->select('articles','*');
+/*$blog->insertionArticle("you","should","probably","choose","your","words","wisely","my","dear");*/
