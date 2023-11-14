@@ -1,27 +1,20 @@
+<?php include_once 'bdd/connexion.php';?>
+
 <section id="partSeven" class="format">
     <p class="intro">Magazine</p>
     <h2>Our beauty blog</h2>
 
     <hr>
 
-    <div class="threeCards">
-        <div class="card">
-            <img src="images/ourbeuatyblog/massage21-400x250.jpg" alt="">
-           <h3>Best Haircut Trends in 2020</h3> 
-           <p class="winner">Anasthasia Assani</p>
-           <button>Read more</button>
-        </div>
-        <div class="card">
-            <img src="images/ourbeuatyblog/massage20-400x250.jpg" alt="">
-           <h3>New Salon in Wellsboro, PA</h3> 
-           <p class="winner">Anasthasia Assani</p>
-           <button>Read more</button>
-        </div>
-        <div class="card">
-            <img src="images/ourbeuatyblog/massage07-400x250.jpg" alt="">
-           <h3>New Hot Stone Massages</h3> 
-           <p class="winner">Anasthasia Assani</p>
-           <button>Read more</button>
-        </div>
+    <div class="threeCards">   
+         <?php
+    foreach ($affiche as $article){
+            echo '<div class="card">
+            <img src="' .$article['photo']. '" alt="">
+           <h3>' .$article['titre']. '</h3> 
+           <p class="winner">'. $article['author']. '</p>
+           <a class="contact" href="article.php">Read more</a>
+           </div>';
+    }?>
     </div>
 </section>

@@ -38,6 +38,20 @@ class maConnexion{
 
     }
 
+    public function selectLimit($table,$colonne,$num){
+        try {
+            $requete = "SELECT $colonne FROM $table LIMIT $num";
+            $resultat = $this->connexionPDO->query($requete);
+            $resultat = $resultat ->fetchAll(PDO::FETCH_ASSOC);
+            
+            return $resultat;
+            
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+        }
+
+    }
+
     public function insertionArticle($titre, $resume, $titre2, $contenu2, $contenu3, $titre3, $photo){
         try {
             $requete = "INSERT INTO articles (titre, resume, titre2, contenu2, titre3, contenu3, photo) VALUES(:titre, :resume, :titre2, :contenu2, :titre3, :contenu3, :photo)";
@@ -85,4 +99,5 @@ class maConnexion{
 
 $blog = new maConnexion('massageproject','','root','localhost');
 $affichage = $blog->select('articles','*');
+$affiche = $blog -> selectLimit('articles', '*','3');
 /*$blog->insertionArticle("you","should","probably","choose","your","words","wisely","my","dear");*/
